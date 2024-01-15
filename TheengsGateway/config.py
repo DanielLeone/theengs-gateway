@@ -96,7 +96,7 @@ def parse_args() -> argparse.Namespace:
         help="Device discovery filter list for Home Assistant",
     )
     parser.add_argument(
-        "-Df",
+        "-m",
         "--mac_address_filter",
         nargs="+",
         help="MAC address filter list, only advertisements from these MACs will be decoded/published",
