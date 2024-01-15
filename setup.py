@@ -27,6 +27,6 @@ setup(
         "pycryptodomex>=3.18.0",
         "TheengsDecoder>=1.6.4",
     ],
-    use_scm_version={"version_scheme": "no-guess-dev"},
     setup_requires=["setuptools_scm"],
+    version="0.0.1",
 )

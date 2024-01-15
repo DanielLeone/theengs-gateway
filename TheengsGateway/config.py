@@ -36,6 +36,8 @@ DEFAULT_CONFIG = {
     "discovery_filter": [
         "IBEACON",
     ],
+    "mac_address_filter": [
+    ],
     "adapter": "",
     "scanning_mode": "active",
     "time_sync": [],
@@ -92,6 +94,12 @@ def parse_args() -> argparse.Namespace:
         "--discovery_filter",
         nargs="+",
         help="Device discovery filter list for Home Assistant",
+    )
+    parser.add_argument(
+        "-Df",
+        "--mac_address_filter",
+        nargs="+",
+        help="MAC address filter list, only advertisements from these MACs will be decoded/published",
     )
     parser.add_argument(
         "-Dh",

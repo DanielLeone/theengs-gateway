@@ -415,6 +415,10 @@ class Gateway:
         # Try to resolve private addresses with known IRKs
         address = self.rpa2id(device.address)
 
+        if self.configuration['mac_address_filter'] and address not in self.configuration['mac_address_filter']:
+            logger.debug("%s not in mac address filter; ignoring advertisement", device.address)
+            return
+
         # Try to add the device to dictionary of clocks to synchronize time.
         self.add_clock(address)
 
